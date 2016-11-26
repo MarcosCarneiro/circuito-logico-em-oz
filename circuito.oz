@@ -48,6 +48,9 @@ fun {XorG Xs Ys}
 end
 
 %Circuito Verificador de Numero Primo
+%O circuito verifica de 0 a (2^n)-1 e retorna 1 se o numero for primo e 0 caso contrario.
+%Onde n eh o numero de variaveis, no caso n = 4.
+%Equacao do circuito: ~(A+B)*C + ~A*C*D + ~B*C*D + B*~C*D. Obtidad atraves do mapa de Karnaugh
 local A B C D J K L M N P Q R in
    A = 0|0|0|0|0|0|0|0|1|1|1|1|1|1|1|1|_
    B = 0|0|0|0|1|1|1|1|0|0|0|0|1|1|1|1|_
