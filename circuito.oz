@@ -73,7 +73,7 @@ end
 %Circuito Verificador de numero pertencente a sequencia de Fibonacci.
 %O circuito verifica de 0 a (2^n)-1 e retorna 1 se o numero pertencer a sequencia de Fibonacci e 0 caso contrario.
 %Onde n eh o numero de variaveis, no caso n = 4.
-%Equacao do circuito: (~B+D)*~(B*C)*(~A+C+~D)*(~A+~C+D).~(A*D)+C  ~(A*C)+D
+%Equacao do circuito: (~B+D)*~(B*C)*~((A*D)+C)*(~(A*C)+D)
 %A equacao foi obtida atraves do mapa de Karnaugh utilizando o metodo de produto de somas e simplicado atraves do teorema de DeMorgan.
 declare
 fun {Fibonacci A B C D}
