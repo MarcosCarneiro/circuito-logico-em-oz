@@ -50,7 +50,8 @@ end
 %Circuito Verificador de Numero Primo
 %O circuito verifica de 0 a (2^n)-1 e retorna 1 se o numero for primo e 0 caso contrario.
 %Onde n eh o numero de variaveis, no caso n = 4.
-%Equacao do circuito: ~(A+B)*C + ~A*C*D + ~B*C*D + B*~C*D. Obtidad atraves do mapa de Karnaugh
+%Equacao do circuito: ~(A+B)*C + ~A*C*D + ~B*C*D + B*~C*D.
+%A equacao foi obtida atraves do mapa de Karnaugh utilizando o metodo de soma de produtos.
 
 declare
 fun {NumPrimo A B C D}
@@ -69,11 +70,25 @@ fun {NumPrimo A B C D}
    end
 end
 
+%Circuito Verificador de numero pertencente a sequencia de Fibonacci.
+%O circuito verifica de 0 a (2^n)-1 e retorna 1 se o numero pertencer a sequencia de Fibonacci e 0 caso contrario.
+%Onde n eh o numero de variaveis, no caso n = 4.
+%Equacao do circuito: (~B+D)*(~B+~C)*(~A+C+~D)*(~A+~C+D).
+%A equacao foi obtida atraves do mapa de Karnaugh utilizando o metodo de produto de somas.
+declare
+fun {Fibonacci A B C D}
+   local K L M N P Q in
+      
+   end
+end
+
+
 local A B C D in
    A = 0|0|0|0|0|0|0|0|1|1|1|1|1|1|1|1|_
    B = 0|0|0|0|1|1|1|1|0|0|0|0|1|1|1|1|_
    C = 0|0|1|1|0|0|1|1|0|0|1|1|0|0|1|1|_
    D = 0|1|0|1|0|1|0|1|0|1|0|1|0|1|0|1|_
    
+   {Browse 'Primo'}
    {Browse {NumPrimo A B C D}}
 end
